@@ -1,0 +1,67 @@
+/* ブラウザで設定されているスタイルのリセット・共通設定 */
+/* 消さないでください */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+textarea,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+/* スタイルのリセット終了 */
+
+/* サイドバーとメインコンテンツを包むための要素のスタイルを書いてください */
+.dashboard-container{
+    /* 子要素を横並びにするためにdisplayをflexにする */
+    display: flex;
+    /* ページの高さ全体を使うために高さを100vhにする */
+    height: 100vh;
+}
+
+/* サイドバーに関連するスタイルを書いてください */
+.sidebar{
+      /* サイドバーの幅を設定する */
+    width: 256px;
+    /* 背景色を少し明るい灰色にする */
+    background-color: #f5f5f5;
+    /* 右側に薄い線で境界線を作る */
+    border-right: 1px solid #e0e0e0;
+    /* 親要素の高さに合わせる */
+    height: 100%;
+    /* 子要素を縦に並べるためにflexboxを使う */
+    display: flex;
+    flex-direction: column;
+    /* サイドバーが縮まないようにする */
+    flex-shrink: 0;
+}
+
+/* メインコンテンツに関連するスタイルを書いてください */
+.main-content{
+    /* 残りのスペースを全て使うためにflex-growを1にする */
+    flex-grow: 1;
+    /* コンテンツの配置を縦方向にする */
+    display: flex;
+    flex-direction: column;
+    /* スクロールが必要な場合にのみスクロールバーを表示する */
+    overflow-y: auto;
+    /* 左右に余白を設定する */
+    padding: 24px;
+}
+
